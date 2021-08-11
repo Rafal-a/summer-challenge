@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+
+
+        <Constraint
+            android:id="@+id/text_hello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/lottieAnimationView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.086" />
+
+        <Constraint
+            android:id="@+id/text_summer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="summer"
+            android:textSize="27sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/text_hello"
+            app:layout_constraintStart_toStartOf="@+id/text_hello"
+            app:layout_constraintTop_toBottomOf="@+id/text_hello" />
+
+
+
+
+    </ConstraintSet>
+
+    <Transition
+        app:duration="1500"
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start"
+        app:autoTransition="animateToEnd">
+        <OnClick app:targetId="@id/lottieAnimationView"
+            />
+
+    </Transition>
+</MotionScene>
